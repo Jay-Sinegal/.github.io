@@ -60,6 +60,9 @@
         ],
         "email": "Jsinegal@bestversionmedia.com",
         "telephone": "+1-337-523-8767",
+        "sameAs": [
+          "https://www.linkedin.com/in/jaylen-sinegal"
+        ],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Lafayette",
@@ -347,6 +350,41 @@
       .trust-item {
         color: var(--muted);
         font-weight: 700;
+      }
+
+      .audience-section {
+        background: linear-gradient(135deg, #f1e4d2 0%, #f8f4ee 58%, #e8d8c2 100%);
+      }
+
+      .audience-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .audience-card {
+        padding: 1.35rem;
+        border: 1px solid rgba(122, 77, 38, 0.16);
+        border-radius: 18px;
+        background: rgba(255, 253, 249, 0.76);
+      }
+
+      .audience-card h3 {
+        font-size: 1.15rem;
+      }
+
+      .audience-card p {
+        margin-top: 0.6rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .audience-card ul {
+        margin: 0.8rem 0 0;
+        padding-left: 1rem;
+        color: var(--muted);
+        font-size: 0.86rem;
+        line-height: 1.75;
       }
 
       .home-showcase {
@@ -830,7 +868,7 @@
       footer a { color: #f4d9a2; }
 
       @media (max-width: 900px) {
-        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .contact-grid, .home-grid {
+        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .contact-grid, .home-grid, .audience-grid {
           grid-template-columns: 1fr;
         }
         .hero { padding-top: 3rem; }
@@ -867,6 +905,7 @@
 
         <nav class="nav" aria-label="Main navigation">
           <a href="#about">About</a>
+          <a href="#audiences">Who we support</a>
           <a href="#services">Services</a>
           <a href="#process">Process</a>
           <a href="#contact">Contact</a>
@@ -971,6 +1010,44 @@
                 <strong>Community trust</strong>
                 <span>Turn local presence into more calls, conversations, and customers.</span>
               </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="audiences" class="section audience-section" aria-labelledby="audience-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">Who we support</span>
+            <h2 id="audience-title">A growth partner for brands that want to lead their category.</h2>
+            <p class="lead">
+              We help established businesses, emerging brands, and experts become easier to find, easier to trust, and easier to choose through consistent strategy and market visibility.
+            </p>
+          </div>
+
+          <div class="audience-grid">
+            <article class="audience-card">
+              <h3>Home services</h3>
+              <p>Reach homeowners when they are ready to protect, improve, or invest in their homes.</p>
+              <ul><li>HVAC, plumbing, roofing</li><li>Remodeling, landscaping, restoration</li><li>Electrical, solar, flooring</li></ul>
+            </article>
+
+            <article class="audience-card">
+              <h3>Professional experts</h3>
+              <p>Turn expertise into authority with a clear message and a stronger reputation.</p>
+              <ul><li>Law, finance, and insurance</li><li>Healthcare and wellness</li><li>Consultants, advisors, and real estate</li></ul>
+            </article>
+
+            <article class="audience-card">
+              <h3>Specialty businesses</h3>
+              <p>Give distinctive businesses the visibility and creative direction needed to stay memorable.</p>
+              <ul><li>Retail, boutiques, and jewelers</li><li>Restaurants and automotive</li><li>Schools, daycares, and events</li></ul>
+            </article>
+
+            <article class="audience-card">
+              <h3>Destinations &amp; experiences</h3>
+              <p>Connect hospitality and travel brands with families planning where to go and what to do next.</p>
+              <ul><li>Hotels, resorts, and RV parks</li><li>Tourism and attractions</li><li>Tour operators and hospitality</li></ul>
             </article>
           </div>
         </div>
@@ -1193,6 +1270,11 @@
             <div class="contact-item">
               <div class="contact-label">Email</div>
               <div class="contact-value"><a href="mailto:jsinegal@bestversionmedia.com">jsinegal@bestversionmedia.com</a></div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value"><a href="https://www.linkedin.com/in/jaylen-sinegal" rel="me noopener" target="_blank">Connect with Jaylen</a></div>
             </div>
 
             <div class="contact-item">
