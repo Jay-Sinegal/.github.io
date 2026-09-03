@@ -1,621 +1,1080 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jaylen Sinegal helps businesses, experts, and local brands grow through brand strategy, SEO, community visibility, and conversion-focused marketing." />
+    <meta name="keywords" content="Jaylen Sinegal, brand strategist, business strategist, SEO marketing, community marketing, digital visibility, Lafayette Louisiana marketing, local business growth" />
+    <meta name="theme-color" content="#1a1715" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jaylen Sinegal | Brand & Business Strategist" />
+    <meta property="og:description" content="Helping experts and businesses get seen, trusted, and remembered through smarter branding, SEO, and community-driven marketing." />
+    <meta property="og:url" content="https://jaylensinegal.com/" />
+    <meta property="og:image" content="https://jaylensinegal.com/og-image.jpg" />
+    <meta property="og:site_name" content="Jaylen Sinegal" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jaylen Sinegal | Brand & Business Strategist" />
+    <meta name="twitter:description" content="Strategic branding and growth marketing for businesses and experts ready to stand out and convert." />
+    <meta name="twitter:image" content="https://jaylensinegal.com/og-image.jpg" />
+    <link rel="canonical" href="https://jaylensinegal.com/" />
+    <title>Jaylen Sinegal | Brand & Business Strategist</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V09SKB92BX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-V09SKB92BX');
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jaylen Sinegal",
+        "jobTitle": "Brand & Business Strategist",
+        "description": "Helping experts and businesses build stronger brands, improve visibility, and convert attention into growth.",
+        "url": "https://jaylensinegal.com/",
+        "areaServed": "United States",
+        "knowsAbout": [
+          "Brand Strategy",
+          "SEO",
+          "Community Marketing",
+          "Digital Visibility",
+          "Growth Strategy"
+        ],
+        "email": "Jsinegal@bestversionmedia.com",
+        "telephone": "+1-337-523-8767",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lafayette",
+          "addressRegion": "Louisiana",
+          "addressCountry": "US"
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --bg: #f8f4ee;
+        --bg-strong: #f1e8dc;
+        --panel: #fffdf9;
+        --ink: #16120f;
+        --muted: #5c524f;
+        --line: rgba(33, 26, 20, 0.12);
+        --gold: #d7b57a;
+        --gold-strong: #b9894d;
+        --gold-deep: #7a4d26;
+        --gold-soft: #f1e0c2;
+        --charcoal: #12100f;
+        --charcoal-soft: #201d1b;
+        --shadow: 0 26px 68px rgba(18, 16, 15, 0.15);
+        --radius: 22px;
+        --max: 1200px;
+      }
 
-  <!-- ============================================================
-    YOUR WEBSITE — Powered by GitHub Pages
-    Built at the CMET "Your Website Should Be Making You Money"
-    Workshop | Orlando, FL | September 2026
-  ============================================================ -->
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(215, 181, 122, 0.14), transparent 22%),
+          linear-gradient(180deg, #f9f5f0 0%, #f3efe9 100%);
+        color: var(--ink);
+        line-height: 1.7;
+      }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      p, h1, h2, h3 { margin: 0; }
 
-  <title>Jaylen Sinegal — Brand &amp; Business Strategist</title>
-  <meta name="description" content="Turning Your Vision Into a Brand People Remember. Serving communities and businesses nationwide." />
+      .container {
+        width: min(var(--max), calc(100% - 2rem));
+        margin: 0 auto;
+      }
 
-  <style>
-    /* ── Reset ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(18px);
+        background: rgba(248, 244, 238, 0.7);
+        border-bottom: 1px solid rgba(122, 77, 38, 0.14);
+      }
 
-    /* ── Design Tokens ── */
-    :root {
-      /* Jaylen Sinegal / Adobe site palette */
-      --accent:       #9A7440; /* restrained antique gold */
-      --accent-light: #E9DFCF; /* pale gold wash */
-      --accent-dark:  #6B4D27; /* deep antique gold */
-      --text:         #121214; /* deep black */
-      --text-muted:   #5D5B58; /* warm graphite */
-      --border:       #B8BBC0; /* metallic silver */
-      --bg:           #F7F2E8; /* warm ivory */
-      --bg-soft:      #E9E6DF; /* soft stone */
-      --graphite:     #25262A;
-      --silver:       #C5C8CD;
-      --radius:       10px;
-      --max:          780px;
-    }
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 76px;
+        gap: 1rem;
+      }
 
-    /* ── Base ── */
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.75;
-      font-size: 18px;
-    }
-    img { max-width: 100%; display: block; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        font-size: 1.05rem;
+        color: var(--gold-deep);
+      }
 
-    /* ── Layout ── */
-    .container {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+      .brand-mark {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--gold), #d9b578);
+        box-shadow: 0 0 0 6px rgba(180, 138, 84, 0.14);
+      }
 
-    /* ── Navigation ── */
-    nav {
-      position: sticky;
-      top: 0;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      z-index: 100;
-      padding: 1rem 0;
-    }
-    nav .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    .nav-brand {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: var(--accent);
-      letter-spacing: -0.01em;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      font-family: system-ui, sans-serif;
-      font-size: 0.9rem;
-    }
-    .nav-links a { color: var(--text-muted); }
-    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
 
-    /* ── Hero ── */
-    .hero {
-      padding: 5rem 0 4rem;
-      text-align: center;
-      background:
-        radial-gradient(circle at 50% 0%, #333438 0%, var(--graphite) 38%, #111113 100%);
-      color: var(--bg);
-    }
-    .hero-eyebrow {
-      font-family: system-ui, sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.25rem;
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.25rem;
-      color: var(--bg);
-    }
-    .hero-sub {
-      font-size: 1.15rem;
-      color: var(--silver);
-      max-width: 560px;
-      margin: 0 auto 1.25rem;
-      font-family: system-ui, sans-serif;
-      line-height: 1.6;
-    }
-    .hero-line {
-      font-size: 0.98rem;
-      color: var(--silver);
-      max-width: 600px;
-      margin: 0 auto 2.25rem;
-      font-family: system-ui, sans-serif;
-      line-height: 1.6;
-    }
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--bg);
-      font-family: system-ui, sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 0.85rem 2rem;
-      border-radius: var(--radius);
-      transition: background 0.2s;
-    }
-    .btn:hover { background: var(--accent-dark); text-decoration: none; }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      margin-left: 0.75rem;
-    }
-    .btn-outline:hover { background: var(--accent-light); }
+      .nav a {
+        color: var(--muted);
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
 
-    /* ── Trust Bar ── */
-    .trust-bar {
-      background: var(--bg-soft);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 1.25rem 0;
-      text-align: center;
-    }
-    .trust-bar p {
-      font-family: system-ui, sans-serif;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-    .trust-bar strong { color: var(--text); }
+      .nav a:hover { color: var(--gold-deep); }
 
-    /* ── Section base ── */
-    section { padding: 4rem 0; }
-    .section-label {
-      font-family: system-ui, sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-    }
-    .section-title {
-      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-      margin-bottom: 1rem;
-    }
-    .section-intro {
-      font-family: system-ui, sans-serif;
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 560px;
-      line-height: 1.65;
-      margin-bottom: 2.5rem;
-    }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0.85rem 1.5rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
 
-    /* ── About ── */
-    .about { background: var(--bg-soft); }
-    .about-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-    .about-photo {
-      width: 100%;
-      aspect-ratio: 4/5;
-      background: var(--accent-light);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: system-ui, sans-serif;
-      font-size: 0.85rem;
-      color: var(--accent);
-      text-align: center;
-      padding: 1rem;
-      /* REPLACE THIS BLOCK with an <img> tag once you have a photo:
-         <img src="your-photo.jpg" alt="Jaylen Sinegal" style="border-radius:12px;width:100%;"> */
-    }
-    .about-text p {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--text);
-      margin-bottom: 1rem;
-    }
-    .about-text p:last-child { margin-bottom: 0; }
+      .button:hover { transform: translateY(-1px); }
 
-    /* ── Services ── */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 1.5rem;
-      margin-top: 0.5rem;
-    }
-    .service-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.75rem 1.5rem;
-    }
-    .service-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--accent-light);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-    .service-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-    }
-    .service-card p {
-      font-family: system-ui, sans-serif;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
+      .button-primary {
+        background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+        color: #fff;
+        box-shadow: 0 16px 40px rgba(122, 77, 38, 0.32);
+      }
 
-    /* Credentials */
-    .credentials { background: var(--bg-soft); }
-    .credentials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-    
+      .button-secondary {
+        border-color: rgba(138, 98, 57, 0.35);
+        background: rgba(255, 255, 255, 0.36);
+        color: var(--gold-deep);
+      }
 
-    /* ── Testimonial ── */
-    .testimonial {
-      background: linear-gradient(135deg, #1A1A1C 0%, var(--graphite) 72%, #343126 100%);
-      color: var(--bg);
-      border-top: 2px solid var(--accent);
-      border-bottom: 1px solid var(--silver);
-    }
-    .testimonial blockquote {
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      line-height: 1.55;
-      max-width: 640px;
-      margin: 0 auto 1.5rem;
-      text-align: center;
-      font-style: italic;
-    }
-    .testimonial cite {
-      display: block;
-      text-align: center;
-      font-family: system-ui, sans-serif;
-      font-size: 0.9rem;
-      font-style: normal;
-      opacity: 0.85;
-    }
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: minmax(280px, 1fr) minmax(240px, 0.75fr);
-      gap: 2.5rem;
-      align-items: center;
-    }
-    .testimonial blockquote,
-    .testimonial cite { text-align: left; margin-left: 0; }
-    .testimonial-stars {
-      color: var(--accent);
-      letter-spacing: 0.15em;
-      margin-bottom: 1rem;
-    }
-    .testimonial-image {
-      width: 100%;
-      border: 1px solid var(--silver);
-      border-radius: var(--radius);
-    }
+      .hero {
+        padding: 4.5rem 0 3rem;
+        background:
+          radial-gradient(circle at top, rgba(215, 181, 122, 0.16), transparent 26%),
+          linear-gradient(135deg, #120f0d 0%, #1d1714 30%, #2b2421 58%, #171412 100%);
+        color: #f5efe8;
+      }
 
-    /* ── CTA ── */
-    .cta { text-align: center; background: var(--bg-soft); }
-    .cta .section-title { max-width: 520px; margin: 0 auto 1rem; }
-    .cta .section-intro { margin: 0 auto 2rem; }
-    .cta-buttons { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 2.5rem;
+        align-items: center;
+      }
 
-    /* ── Contact ── */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .contact-item {
-      font-family: system-ui, sans-serif;
-    }
-    .contact-item .label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.35rem;
-    }
-    .contact-item .value {
-      font-size: 1rem;
-      color: var(--text);
-    }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.5rem 0.9rem;
+        border: 1px solid rgba(214, 180, 125, 0.35);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.03);
+        color: #e7c888;
+        font-size: 0.74rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
 
-    /* ── Footer ── */
-    footer {
-      background: #0D0D0F;
-      color: rgba(255,255,255,0.6);
-      padding: 2rem 0;
-      text-align: center;
-      font-family: system-ui, sans-serif;
-      font-size: 0.85rem;
-    }
-    footer strong { color: var(--bg); }
-    footer a { color: rgba(255,255,255,0.7); }
+      .hero h1 {
+        margin-top: 1.2rem;
+        font-size: clamp(2.5rem, 5vw, 5rem);
+        line-height: 0.96;
+        letter-spacing: -0.07em;
+      }
 
-    /* ── Divider ── */
-    hr.section-rule {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 0;
-    }
+      .hero-copy {
+        margin-top: 1.4rem;
+        max-width: 660px;
+        color: rgba(245, 239, 232, 0.8);
+        font-size: 1.08rem;
+      }
 
-    /* ── Mobile ── */
-    @media (max-width: 640px) {
-      .hero { padding: 3.5rem 0 3rem; }
-      .about-inner { grid-template-columns: 1fr; }
-      .about-photo { aspect-ratio: 3/2; }
-      .btn-outline { margin-left: 0; }
-      .nav-links { gap: 1rem; }
-      .recognition-feature,
-      .testimonial-grid { grid-template-columns: 1fr; }
-    }
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
 
-    /* ── Reduced motion ── */
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-    }
-  </style>
-</head>
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(110px, 1fr));
+        gap: 1rem;
+        margin-top: 2.25rem;
+      }
 
-<body>
+      .stat {
+        padding: 1rem 1rem 0.85rem;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+      }
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="container">
-      <span class="nav-brand">Jaylen Sinegal</span>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#credentials">Credentials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+      .stat strong {
+        display: block;
+        font-size: clamp(1.3rem, 2vw, 1.8rem);
+        color: #fff;
+        letter-spacing: -0.05em;
+      }
 
+      .stat span {
+        color: rgba(245, 239, 232, 0.7);
+        font-size: 0.8rem;
+      }
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <p class="hero-eyebrow">Serving Communities Nationwide</p>
-      <h1>Turning Your Vision Into a Brand People Remember</h1>
-      <p class="hero-sub">
-        From jewelers and authors to daycares, dealerships, and vacation planners —
-        if you're an expert with knowledge to share and a community you want to reach,
-        I help you get in front of the families and homeowners who are looking for
-        exactly what you offer.
-      </p>
-      <p class="hero-line">
-        I connect experts and brands with valuable knowledge or services who want to
-        reach high-value homeowners every month — home-service pros, healthcare and
-        wellness experts, schools, entertainment and hospitality brands, retailers,
-        and community sponsors.
-      </p>
-      <div>
-        <a href="#contact" class="btn">Get Started Today</a>
-        <a href="#about" class="btn btn-outline">Learn More</a>
+      .hero-card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: var(--radius);
+        padding: 1.25rem;
+        box-shadow: var(--shadow);
+      }
+
+      .mini-panel {
+        padding: 1rem;
+        border-radius: 18px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .mini-panel + .mini-panel { margin-top: 0.9rem; }
+
+      .mini-label {
+        display: block;
+        margin-bottom: 0.4rem;
+        color: #d7c4ad;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .mini-title {
+        display: block;
+        font-size: 1.05rem;
+        font-weight: 700;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.42rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(180, 138, 84, 0.12);
+        border: 1px solid rgba(180, 138, 84, 0.28);
+        color: #f0d8ae;
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      .trust {
+        background: #f5f0e7;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .trust-inner {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        text-align: center;
+        padding: 1.1rem 0;
+      }
+
+      .trust-item {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .section { padding: 5.5rem 0; }
+
+      .section-header {
+        max-width: 700px;
+        margin-bottom: 2.2rem;
+      }
+
+      .kicker {
+        color: var(--gold-deep);
+        font-size: 0.76rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+
+      .section h2 {
+        margin-top: 0.8rem;
+        font-size: clamp(2.1rem, 3vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -0.06em;
+      }
+
+      .lead {
+        margin-top: 1rem;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .portrait {
+        min-height: 520px;
+        border-radius: 28px;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(180, 138, 84, 0.2), rgba(128, 93, 59, 0.06));
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .portrait::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 38% 28%, rgba(255,255,255,0.7), transparent 18%),
+          linear-gradient(180deg, rgba(18, 15, 14, 0.2), rgba(18, 15, 14, 0.62));
+      }
+
+      .portrait::after {
+        content: "Jaylen Sinegal";
+        position: absolute;
+        left: 1.5rem;
+        bottom: 1.5rem;
+        font-size: clamp(1.6rem, 3vw, 2.5rem);
+        letter-spacing: -0.06em;
+        font-weight: 800;
+        color: #fff;
+      }
+
+      .about-copy {
+        display: grid;
+        gap: 1.15rem;
+      }
+
+      .about-copy p {
+        color: var(--muted);
+        font-size: 1.02rem;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .card {
+        background: rgba(255,255,255,0.7);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        box-shadow: 0 20px 40px rgba(26, 23, 21, 0.04);
+      }
+
+      .icon {
+        width: 58px;
+        height: 58px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        background: linear-gradient(135deg, var(--gold-soft), rgba(180, 138, 84, 0.14));
+        color: var(--gold-deep);
+      }
+
+      .card h3 {
+        font-size: 1.25rem;
+        letter-spacing: -0.04em;
+      }
+
+      .card p {
+        margin-top: 0.8rem;
+        color: var(--muted);
+      }
+
+      .process {
+        background: linear-gradient(180deg, #f5efe8 0%, #efe7df 100%);
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .step {
+        background: rgba(255,255,255,0.72);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 1.4rem 1.2rem;
+      }
+
+      .step-no {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(180, 138, 84, 0.14);
+        color: var(--gold-deep);
+        font-weight: 800;
+      }
+
+      .step h3 {
+        margin-top: 1rem;
+        font-size: 1.15rem;
+        letter-spacing: -0.03em;
+      }
+
+      .step p {
+        margin-top: 0.7rem;
+        color: var(--muted);
+      }
+
+      .testimonial-wrap {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 1.5rem;
+        align-items: stretch;
+      }
+
+      .quote-box {
+        background: linear-gradient(135deg, #1b1714, #2a2522 60%, #1f1a17 100%);
+        color: #f6efe5;
+        border-radius: var(--radius);
+        padding: 2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .quote-box .stars {
+        color: #e7b96c;
+        letter-spacing: 0.18em;
+        font-size: 1.3rem;
+      }
+
+      .quote-box blockquote {
+        margin-top: 1rem;
+        font-size: clamp(1.25rem, 2vw, 1.9rem);
+        line-height: 1.45;
+        letter-spacing: -0.04em;
+      }
+
+      .quote-box cite {
+        display: block;
+        margin-top: 1rem;
+        color: rgba(246, 239, 229, 0.75);
+        font-style: normal;
+      }
+
+      .proof-panel {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .proof-box {
+        background: rgba(255,255,255,0.72);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 1.2rem;
+      }
+
+      .proof-metric {
+        color: var(--gold-deep);
+        font-size: clamp(1.8rem, 3vw, 2.7rem);
+        font-weight: 900;
+        letter-spacing: -0.07em;
+      }
+
+      .proof-label {
+        margin-top: 0.5rem;
+        color: var(--muted);
+      }
+
+      .cta { background: linear-gradient(180deg, #f8f4ee 0%, #f1e8dc 100%); }
+
+      .cta-box {
+        background: linear-gradient(135deg, #1d1917, #312d2a);
+        border-radius: 30px;
+        padding: clamp(1.8rem, 4vw, 3rem);
+        color: #f7f1ea;
+        text-align: center;
+        box-shadow: var(--shadow);
+      }
+
+      .cta-box h2 {
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        line-height: 1;
+        letter-spacing: -0.06em;
+      }
+
+      .cta-box p {
+        max-width: 650px;
+        margin: 1rem auto 0;
+        color: rgba(247, 241, 234, 0.75);
+      }
+
+      .cta-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1.8rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+
+      .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .card, .step, .proof-box, .contact-item, .hero-card, .quote-box, .cta-box {
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+
+      .card:hover, .step:hover, .proof-box:hover, .contact-item:hover, .hero-card:hover, .quote-box:hover, .cta-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 42px rgba(19, 15, 13, 0.09);
+        border-color: rgba(180, 138, 84, 0.35);
+      }
+
+      .hero-card {
+        animation: floatCard 6s ease-in-out infinite;
+      }
+
+      @keyframes floatCard {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+
+      .stat strong {
+        position: relative;
+      }
+
+      .stat strong::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(180, 138, 84, 0), rgba(180, 138, 84, 0.8), rgba(180, 138, 84, 0));
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .lead-form {
+        display: grid;
+        gap: 1rem;
+        max-width: 760px;
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .form-field {
+        display: grid;
+        gap: 0.4rem;
+      }
+
+      .form-field label {
+        color: var(--gold-deep);
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .form-field input,
+      .form-field textarea,
+      .form-field select {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 0.8rem 0.9rem;
+        background: var(--panel);
+        color: var(--ink);
+        font: inherit;
+      }
+
+      .form-field textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .form-note {
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .contact-item {
+        background: rgba(255,255,255,0.72);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 1.2rem;
+      }
+
+      .contact-label {
+        color: var(--gold-deep);
+        font-size: 0.74rem;
+        letter-spacing: 0.14em;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .contact-value {
+        margin-top: 0.7rem;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      footer {
+        background: #100f10;
+        color: rgba(255,255,255,0.7);
+        padding: 2rem 0;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+
+      footer .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      footer a { color: #f4d9a2; }
+
+      @media (max-width: 900px) {
+        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero { padding-top: 3rem; }
+        .portrait { min-height: 420px; }
+      }
+
+      @media (max-width: 640px) {
+        .topbar-inner {
+          justify-content: center;
+          flex-direction: column;
+          padding: 1rem 0;
+        }
+
+        .nav { justify-content: center; }
+        .hero-stats, .trust-inner { grid-template-columns: 1fr; }
+        .button { width: 100%; }
+        .hero-actions, .cta-actions { flex-direction: column; }
+        .form-grid { grid-template-columns: 1fr; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .button { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="#top" class="brand" aria-label="Jaylen Sinegal home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          Jaylen Sinegal
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <div class="trust-bar">
-    <div class="container">
-      <p>
-        <strong>Reaching high-value homeowners and families nationwide, every month.</strong>
-        &nbsp;·&nbsp; 1,000+ Markets Nationwide
-      </p>
-    </div>
-  </div>
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Serving communities nationwide</span>
+            <h1>Turn attention into action.</h1>
+            <p class="hero-copy">
+              I help experts, brands, and local businesses get seen, trusted, and remembered by the people who matter most.
+              Through strategy, storytelling, SEO, and community-driven marketing, I build visibility that actually converts.
+            </p>
 
-  <hr class="section-rule" />
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">Book a free consultation</a>
+              <a class="button button-secondary" href="#about">Learn more</a>
+            </div>
 
+            <div class="hero-stats" aria-label="Business stats">
+              <div class="stat">
+                <strong>1,000+</strong>
+                <span>markets reached</span>
+              </div>
+              <div class="stat">
+                <strong>50%</strong>
+                <span>growth in reach</span>
+              </div>
+              <div class="stat">
+                <strong>10%</strong>
+                <span>revenue lift</span>
+              </div>
+            </div>
+          </div>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-inner">
+          <aside class="hero-card" aria-label="Highlights">
+            <div class="mini-panel">
+              <span class="mini-label">Strategy</span>
+              <span class="mini-title">Brand positioning that cuts through the noise</span>
+            </div>
+            <div class="mini-panel">
+              <span class="mini-label">Visibility</span>
+              <span class="mini-title">SEO + digital + sponsorships + local reach</span>
+            </div>
+            <div class="mini-panel">
+              <span class="mini-label">Growth</span>
+              <span class="mini-title">Marketing built to turn attention into sales</span>
+            </div>
 
-        <div class="about-photo">
-          📷 Replace this box with<br>your professional photo.<br><br>
-          Tip: A clear, well-lit<br>headshot builds trust<br>faster than anything else.
+            <div class="pill-row" aria-label="Services offered">
+              <span class="pill">Brand Strategy</span>
+              <span class="pill">SEO</span>
+              <span class="pill">Community Marketing</span>
+              <span class="pill">Print & Digital</span>
+            </div>
+          </aside>
         </div>
+      </section>
 
-        <div class="about-text">
-          <p class="section-label">About</p>
-          <h2 class="section-title">Jaylen Sinegal</h2>
-
-          <p>
-            Meet Jaylen Sinegal, a brand and business strategist rooted in Louisiana
-            storytelling and driven by community. My work sits at the intersection
-            of culture and strategy — helping business owners, artists, and industry
-            experts tell their story in a way that reaches the right people and moves
-            them to act.
-          </p>
-          <p>
-            My path has been built on both real-world results and serious study. I'm
-            currently pursuing a Master's in Entertainment Business (2027), hold a
-            Bachelor's in Music Business, and I'm a member of the National Society of
-            Collegiate Scholars. That foundation, paired with hands-on strategy work,
-            means the advice you get isn't guesswork — it's grounded in how culture,
-            media, and business actually connect.
-          </p>
-          <p>
-            What sets me apart is reach. Through a network spanning over 1,000 markets
-            nationwide, I connect brands with high-value homeowners and families every
-            month through SEO, print, digital advertising, sponsorships, and grassroots
-            engagement. I don't just build a brand on paper — I put it in front of the
-            people who are ready to buy, book, or call.
-          </p>
+      <div class="trust" aria-label="Trust statement">
+        <div class="container trust-inner">
+          <div class="trust-item">High-value homeowners & families</div>
+          <div class="trust-item">Expert-led positioning</div>
+          <div class="trust-item">Clear, results-focused strategy</div>
         </div>
-
       </div>
-    </div>
-  </section>
 
-  <hr class="section-rule" />
+      <section id="about" class="section reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">About</span>
+            <h2>Built for people, rooted in community.</h2>
+            <p class="lead">
+              Jaylen Sinegal blends strategic thinking, creative storytelling, and business sense to help founders, experts, and local brands connect with the right audience and convert them into loyal customers.
+            </p>
+          </div>
 
+          <div class="about-grid">
+            <div class="portrait" aria-label="Jaylen Sinegal portrait placeholder"></div>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <p class="section-label">What I Offer</p>
-      <h2 class="section-title">Services</h2>
-      <p class="section-intro">
-        Every service is delivered with care, professionalism,
-        and a commitment to the people I serve.
-      </p>
-
-      <div class="services-grid">
-
-        <div class="service-card">
-          <div class="service-icon"></div>
-          <h3>Brand Strategy &amp; Positioning</h3>
-          <p>
-            You get a clear, honest roadmap for who your brand is and why customers
-            should choose you over anyone else. This solves the problem of blending
-            in — so you stop competing on price and start standing out.
-          </p>
+            <div class="about-copy">
+              <p>
+                My work sits at the intersection of culture, media, and business. I help clients turn big ideas into brands people remember and trust.
+              </p>
+              <p>
+                From local businesses to expert-led professionals, I focus on clarity, visibility, and momentum. The goal is simple: make the right people notice you, understand your value, and take action.
+              </p>
+              <p>
+                Through a multi-market strategy spanning over 1,000 communities, I connect brands with the homeowners, families, and decision-makers most likely to engage and buy.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="service-card">
-          <div class="service-icon"></div>
-          <h3>Community &amp; Market Visibility Campaigns</h3>
-          <p>
-            You get your business placed directly in front of high-value homeowners
-            and families in your target neighborhoods through print, digital, and
-            local sponsorships. This solves the problem of marketing dollars going
-            to the wrong audience.
-          </p>
+      <section id="services" class="section reveal">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">What I offer</span>
+            <h2>Marketing that feels premium and performs.</h2>
+            <p class="lead">
+              Every engagement is designed to solve a real problem: weak positioning, poor visibility, and marketing that doesn’t convert.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="card">
+              <div class="icon" aria-hidden="true">✦</div>
+              <h3>Brand Strategy & Positioning</h3>
+              <p>
+                Brand strategy, messaging clarity, competitive differentiation, and market positioning designed to help businesses stand out with authority.
+              </p>
+              <ul style="margin: 1rem 0 0; padding-left: 1.1rem; color: var(--muted); line-height: 1.8;">
+                <li>Integrated Marketing Campaigns</li>
+                <li>Content Strategy & Creative Direction</li>
+                <li>Market Research & Consumer Insights</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">◎</div>
+              <h3>Community & Partnership Marketing</h3>
+              <p>
+                Build visibility through sponsorships, partnerships, local engagement, and high-trust community channels that drive conversion.
+              </p>
+              <ul style="margin: 1rem 0 0; padding-left: 1.1rem; color: var(--muted); line-height: 1.8;">
+                <li>Sponsorship Development & Sales</li>
+                <li>Event Concept & Coordination</li>
+                <li>Business Development</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">↗</div>
+              <h3>Digital Growth & Optimization</h3>
+              <p>
+                Crush friction in the funnel with digital strategy, SEO, CRM optimization, and performance-focused frameworks that turn attention into action.
+              </p>
+              <ul style="margin: 1rem 0 0; padding-left: 1.1rem; color: var(--muted); line-height: 1.8;">
+                <li>Digital & Social Media Marketing</li>
+                <li>SEO / CRM Optimization</li>
+                <li>CRM Platforms • SEO Tools • Social Media Management Platforms</li>
+              </ul>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="service-card">
-          <div class="service-icon"></div>
-          <h3>Growth &amp; Revenue Strategy</h3>
-          <p>
-            You get a hands-on plan for turning visibility into actual sales — the
-            same approach that grew one client's reach by 50% and helped a startup
-            increase revenue by 10%. This solves the problem of having attention but
-            not knowing how to convert it into income.
-          </p>
+      <section id="process" class="section process">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">How it works</span>
+            <h2>A straightforward process with real momentum.</h2>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <span class="step-no">01</span>
+              <h3>Discover</h3>
+              <p>We identify your market, offer, and biggest growth opportunities.</p>
+            </div>
+
+            <div class="step">
+              <span class="step-no">02</span>
+              <h3>Position</h3>
+              <p>We sharpen your value proposition so the right audience understands your worth.</p>
+            </div>
+
+            <div class="step">
+              <span class="step-no">03</span>
+              <h3>Activate</h3>
+              <p>We launch visibility campaigns built for reach, trust, and call-to-action.</p>
+            </div>
+
+            <div class="step">
+              <span class="step-no">04</span>
+              <h3>Grow</h3>
+              <p>We refine performance and build sustainable momentum around what works.</p>
+            </div>
+          </div>
         </div>
+      </section>
 
-      </div>
-    </div>
-  </section>
+      <section class="section">
+        <div class="container testimonial-wrap">
+          <div class="quote-box">
+            <div class="stars" aria-label="Five star review">★★★★★</div>
+            <blockquote>
+              “Best Version Media has been amazing to work with! They created a beautiful, professional magazine ad that truly represents our business.”
+            </blockquote>
+            <cite>— BVM Advertiser</cite>
+          </div>
 
-  <hr class="section-rule" />
+          <div class="proof-panel" aria-label="Business outcomes">
+            <div class="proof-box">
+              <div class="proof-metric">50%</div>
+              <div class="proof-label">increased reach for one client</div>
+            </div>
+            <div class="proof-box">
+              <div class="proof-metric">10%</div>
+              <div class="proof-label">revenue lift in a growth sprint</div>
+            </div>
+            <div class="proof-box">
+              <div class="proof-metric">1000+</div>
+              <div class="proof-label">market touchpoints nationwide</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="section cta">
+        <div class="container">
+          <div class="cta-box">
+            <span class="kicker" style="color: #f4d49e;">Ready when you are</span>
+            <h2>Build a brand people remember.</h2>
+            <p>
+              Whether you need a stronger presence, clearer strategy, or more qualified visibility, let’s create a marketing approach built for impact.
+            </p>
+            <div class="cta-actions">
+              <a class="button button-primary" href="#contact">Book your consultation</a>
+              <a class="button button-secondary" href="tel:+13375238767">Call now</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
- 
- 
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">Contact</span>
+            <h2>Let’s make your next move count.</h2>
+          </div>
 
-  <hr class="section-rule" />
+          <form class="lead-form" action="https://formspree.io/f/xvkorljo" method="POST" data-lead-form>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
 
+            <div class="form-field">
+              <label for="business">Business or organization</label>
+              <input id="business" name="business" type="text" autocomplete="organization" required />
+            </div>
 
-  <!-- TESTIMONIAL -->
-  <section class="testimonial">
-    <div class="container">
-      <div class="testimonial-grid">
+            <div class="form-field">
+              <label for="need">What do you need help with?</label>
+              <select id="need" name="need" required>
+                <option value="" selected disabled>Select a service</option>
+                <option>Brand strategy and positioning</option>
+                <option>Integrated marketing campaign</option>
+                <option>Digital and social media marketing</option>
+                <option>SEO and CRM optimization</option>
+                <option>Community, sponsorship, or partnership marketing</option>
+                <option>Business development or event coordination</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Tell me about your goal</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="New website consultation request" />
+            <button class="button button-primary" type="submit">Request a consultation</button>
+            <p class="form-note">Your information is used only to respond to your inquiry.</p>
+          </form>
+
+          <div class="contact-grid">
+            <div class="contact-item">
+              <div class="contact-label">Phone</div>
+              <div class="contact-value"><a href="tel:+13375238767">(337) 523-8767</a></div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Email</div>
+              <div class="contact-value"><a href="mailto:jsinegal@bestversionmedia.com">jsinegal@bestversionmedia.com</a></div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Location</div>
+              <div class="contact-value">Lafayette, Louisiana</div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Hours</div>
+              <div class="contact-value">Mon–Sun • 6:00am–7:00pm</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© <span id="year">2026</span> Jaylen Sinegal</div>
         <div>
-          <p class="section-label">Client Perspective</p>
-          <div class="testimonial-stars" aria-label="Five-star testimonial">★★★★★</div>
-          <blockquote>
-            “Best Version Media has been amazing to work with! They created a beautiful,
-            professional magazine ad that truly represents our business. Their team is
-            creative, responsive, and committed to helping local businesses grow.
-            Highly recommended!”
-          </blockquote>
-          <cite>— BVM Advertiser</cite>
-        </div>
-        <img class=  src="client-testimonial.jpg"
-             loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-
-  <!-- CALL TO ACTION -->
-  <section class="cta">
-    <div class="container">
-      <h2 class="section-title">Ready to Get Started?</h2>
-      <p class="section-intro">
-        Book your free consultation today, and let's build a brand strategy that
-        turns the right people — your future customers — into loyal, paying ones.
-      </p>
-      <div class="cta-buttons">
-        <a href="#contact" class="btn">Book Your Free Consultation</a>
-        <a href="tel:+13375238767" class="btn btn-outline">Call Now</a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="section-rule" />
-
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <p class="section-label">Get in Touch</p>
-      <h2 class="section-title">Contact</h2>
-      <p class="section-intro">
-        Ready to take the next step? Reach out, I respond to
-        every inquiry personally.
-      </p>
-
-      <div class="contact-grid">
-        <div class="contact-item">
-          <div class="label">Phone</div>
-          <div class="value">
-            <a href="tel:+13375238767">(337) 523-8767</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="label">Email</div>
-          <div class="value">
-            <a href="mailto:Jaylensinegal@yahoo.com">Jsinegal@bestversionmedia.com</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="label">Location</div>
-          <div class="value">Lafayette, LA</div>
-        </div>
-        <div class="contact-item">
-          <div class="label">Hours</div>
-          <div class="value">6:00am - 7:00pm</div>
+          Built with purpose at the <a href="https://tcmet.org">CMET</a> workshop in Orlando, FL
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
 
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>
-        &copy; 2026 <strong>Jaylen Sinegal</strong>
-        &nbsp;·&nbsp; Lafayette, LA
-        &nbsp;·&nbsp; <a href="mailto:jjsinegal@alumni.fullsail.edu">jjsinegal@alumni.fullsail.edu</a>
-      </p>
-      <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;">
-        Built with purpose at the
-        <a href="https://tcmet.org" style="color:rgba(255,255,255,0.5);">CMET</a>
-        "Your Website Should Be Making You Money" Workshop &mdash; Orlando, FL &mdash; September 2026
-      </p>
-    </div>
-  </footer>
+      const revealItems = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+          }
+        });
+      }, { threshold: 0.12 });
 
-</body>
+      revealItems.forEach((item) => observer.observe(item));
+
+      document.querySelector('[data-lead-form]').addEventListener('submit', () => {
+        gtag('event', 'generate_lead', {
+          event_category: 'engagement',
+          event_label: 'consultation_form'
+        });
+      });
+
+      document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"]').forEach((link) => {
+        link.addEventListener('click', () => {
+          gtag('event', link.href.startsWith('tel:') ? 'phone_click' : 'email_click', {
+            event_category: 'conversion',
+            event_label: link.href
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
