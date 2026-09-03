@@ -942,6 +942,37 @@
         color: var(--ink);
       }
 
+      .meeting-options {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .meeting-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+        padding: 1.25rem;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.72);
+      }
+
+      .meeting-card h3 {
+        font-size: 1.15rem;
+      }
+
+      .meeting-card p {
+        flex: 1;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .meeting-card .button {
+        width: 100%;
+      }
+
       footer {
         background: #100f10;
         color: rgba(255,255,255,0.7);
@@ -960,7 +991,7 @@
       footer a { color: #f4d9a2; }
 
       @media (max-width: 900px) {
-        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .contact-grid, .home-grid, .audience-grid, .offer-grid {
+        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .contact-grid, .home-grid, .audience-grid, .offer-grid, .meeting-options {
           grid-template-columns: 1fr;
         }
         .hero { padding-top: 3rem; }
@@ -1345,7 +1376,7 @@
             <h2>Let’s make your next move count.</h2>
           </div>
 
-          <form class="lead-form" action="https://formspree.io/f/xvkorljo" method="POST" data-lead-form>
+          <form class="lead-form" action="https://formspree.io/f/xeaqkdgv" method="POST" data-lead-form>
             <div class="form-grid">
               <div class="form-field">
                 <label for="name">Name</label>
@@ -1372,6 +1403,16 @@
                 <option>SEO and CRM optimization</option>
                 <option>Community, sponsorship, or partnership marketing</option>
                 <option>Business development or event coordination</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="meeting">Preferred meeting format</label>
+              <select id="meeting" name="meeting" required>
+                <option value="" selected disabled>Choose a format</option>
+                <option>In person - Broussard, Lafayette, Abbeville, New Iberia, or surrounding areas</option>
+                <option>Virtual meeting</option>
+                <option>Phone call</option>
               </select>
             </div>
 
@@ -1410,6 +1451,26 @@
               <div class="contact-label">Hours</div>
               <div class="contact-value">Mon–Sun • 6:00am–7:00pm</div>
             </div>
+          </div>
+
+          <div class="meeting-options" aria-label="Meeting booking options">
+            <article class="meeting-card">
+              <h3>In-person meeting</h3>
+              <p>Broussard, Lafayette, Abbeville, New Iberia, and surrounding areas.</p>
+              <a class="button button-secondary" href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" rel="noopener">See availability</a>
+            </article>
+
+            <article class="meeting-card">
+              <h3>Virtual meeting</h3>
+              <p>Meet online from anywhere in Louisiana or nationwide.</p>
+              <a class="button button-secondary" href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" rel="noopener">Book virtual time</a>
+            </article>
+
+            <article class="meeting-card">
+              <h3>Phone call</h3>
+              <p>Prefer a call? Choose a time online or call directly.</p>
+              <a class="button button-secondary" href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" rel="noopener">Book a phone call</a>
+            </article>
           </div>
         </div>
       </section>
@@ -1450,6 +1511,15 @@
           gtag('event', link.href.startsWith('tel:') ? 'phone_click' : 'email_click', {
             event_category: 'conversion',
             event_label: link.href
+          });
+        });
+      });
+
+      document.querySelectorAll('.meeting-card a').forEach((link) => {
+        link.addEventListener('click', () => {
+          gtag('event', 'booking_click', {
+            event_category: 'conversion',
+            event_label: link.textContent.trim()
           });
         });
       });
