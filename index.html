@@ -19,14 +19,17 @@
 
     /* ── Design Tokens ── */
     :root {
-      --accent:       #2C6E49;
-      --accent-light: #EAF3DE;
-      --accent-dark:  #1a4a2e;
-      --text:         #1a1a1a;
-      --text-muted:   #555;
-      --border:       #e0e0e0;
-      --bg:           #ffffff;
-      --bg-soft:      #f8f8f6;
+      /* Jaylen Sinegal / Adobe site palette */
+      --accent:       #9A7440; /* restrained antique gold */
+      --accent-light: #E9DFCF; /* pale gold wash */
+      --accent-dark:  #6B4D27; /* deep antique gold */
+      --text:         #121214; /* deep black */
+      --text-muted:   #5D5B58; /* warm graphite */
+      --border:       #B8BBC0; /* metallic silver */
+      --bg:           #F7F2E8; /* warm ivory */
+      --bg-soft:      #E9E6DF; /* soft stone */
+      --graphite:     #25262A;
+      --silver:       #C5C8CD;
       --radius:       10px;
       --max:          780px;
     }
@@ -87,6 +90,9 @@
     .hero {
       padding: 5rem 0 4rem;
       text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, #333438 0%, var(--graphite) 38%, #111113 100%);
+      color: var(--bg);
     }
     .hero-eyebrow {
       font-family: system-ui, sans-serif;
@@ -102,11 +108,11 @@
       line-height: 1.15;
       letter-spacing: -0.02em;
       margin-bottom: 1.25rem;
-      color: var(--text);
+      color: var(--bg);
     }
     .hero-sub {
       font-size: 1.15rem;
-      color: var(--text-muted);
+      color: var(--silver);
       max-width: 560px;
       margin: 0 auto 1.25rem;
       font-family: system-ui, sans-serif;
@@ -114,7 +120,7 @@
     }
     .hero-line {
       font-size: 0.98rem;
-      color: var(--text-muted);
+      color: var(--silver);
       max-width: 600px;
       margin: 0 auto 2.25rem;
       font-family: system-ui, sans-serif;
@@ -123,7 +129,7 @@
     .btn {
       display: inline-block;
       background: var(--accent);
-      color: #fff;
+      color: var(--bg);
       font-family: system-ui, sans-serif;
       font-size: 1rem;
       font-weight: 600;
@@ -250,7 +256,12 @@
     }
 
     /* ── Testimonial ── */
-    .testimonial { background: var(--accent); color: #fff; }
+    .testimonial {
+      background: linear-gradient(135deg, #1A1A1C 0%, var(--graphite) 72%, #343126 100%);
+      color: var(--bg);
+      border-top: 2px solid var(--accent);
+      border-bottom: 1px solid var(--silver);
+    }
     .testimonial blockquote {
       font-size: clamp(1.1rem, 2.5vw, 1.5rem);
       line-height: 1.55;
@@ -299,14 +310,14 @@
 
     /* ── Footer ── */
     footer {
-      background: var(--text);
+      background: #0D0D0F;
       color: rgba(255,255,255,0.6);
       padding: 2rem 0;
       text-align: center;
       font-family: system-ui, sans-serif;
       font-size: 0.85rem;
     }
-    footer strong { color: #fff; }
+    footer strong { color: var(--bg); }
     footer a { color: rgba(255,255,255,0.7); }
 
     /* ── Divider ── */
