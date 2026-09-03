@@ -359,6 +359,55 @@
         font-weight: 700;
       }
 
+      .promo-banner {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(100deg, #8b5a2b, #b9894d 48%, #d7b57a);
+        color: #fffaf1;
+      }
+
+      .promo-banner::after {
+        content: "";
+        position: absolute;
+        top: -80px;
+        right: 8%;
+        width: 180px;
+        height: 180px;
+        border: 1px solid rgba(255,255,255,0.24);
+        border-radius: 50%;
+      }
+
+      .promo-inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.25rem 0;
+      }
+
+      .promo-copy strong {
+        display: block;
+        font: 600 clamp(1.35rem, 3vw, 2rem)/1.1 var(--font-display);
+      }
+
+      .promo-copy span {
+        display: block;
+        margin-top: 0.3rem;
+        color: rgba(255,250,241,0.82);
+        font-size: 0.9rem;
+      }
+
+      .promo-badge {
+        flex: 0 0 auto;
+        padding: 0.7rem 1rem;
+        border: 1px solid rgba(255,255,255,0.38);
+        border-radius: 999px;
+        background: rgba(255,255,255,0.12);
+        font-weight: 800;
+      }
+
       .offer-section {
         background: var(--charcoal);
         color: #f7f0e7;
@@ -1016,6 +1065,7 @@
         .button { width: 100%; }
         .hero-actions, .cta-actions { flex-direction: column; }
         .form-grid { grid-template-columns: 1fr; }
+        .promo-inner { align-items: flex-start; flex-direction: column; }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -1106,6 +1156,16 @@
           <div class="trust-item">Clear, results-focused strategy</div>
         </div>
       </div>
+
+      <aside class="promo-banner" aria-label="Grand opening promotion">
+        <div class="container promo-inner">
+          <div class="promo-copy">
+            <strong>Grand opening offer: save 20%.</strong>
+            <span>Save 20% on your introductory month. Select packages may qualify for savings up to 40%.</span>
+          </div>
+          <div class="promo-badge">Limited-time promotion</div>
+        </div>
+      </aside>
 
       <section class="section offer-section" aria-labelledby="offer-title">
         <div class="container">
