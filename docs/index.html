@@ -349,6 +349,80 @@
         font-weight: 700;
       }
 
+      .home-showcase {
+        background: #171311;
+        color: #f7f0e7;
+      }
+
+      .home-showcase .lead {
+        color: rgba(247, 240, 231, 0.72);
+      }
+
+      .home-showcase .kicker {
+        color: var(--gold);
+      }
+
+      .home-grid {
+        display: grid;
+        grid-template-columns: 1.35fr 0.85fr 0.85fr;
+        gap: 1rem;
+      }
+
+      .home-card {
+        position: relative;
+        min-height: 360px;
+        overflow: hidden;
+        border: 1px solid rgba(215, 181, 122, 0.24);
+        border-radius: var(--radius);
+        background: var(--charcoal-soft);
+      }
+
+      .home-card:first-child {
+        min-height: 440px;
+      }
+
+      .home-image {
+        width: 100%;
+        height: 100%;
+        min-height: inherit;
+        object-fit: cover;
+        opacity: 0.82;
+        transition: transform 0.8s ease, opacity 0.8s ease;
+      }
+
+      .home-card:hover .home-image {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+
+      .home-card::after {
+        content: "";
+        position: absolute;
+        inset: 35% 0 0;
+        background: linear-gradient(180deg, transparent, rgba(12, 10, 9, 0.92));
+      }
+
+      .home-caption {
+        position: absolute;
+        right: 1.2rem;
+        bottom: 1.2rem;
+        left: 1.2rem;
+        z-index: 1;
+      }
+
+      .home-caption strong {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 1.35rem;
+      }
+
+      .home-caption span {
+        display: block;
+        margin-top: 0.25rem;
+        color: rgba(247, 240, 231, 0.74);
+        font-size: 0.86rem;
+      }
+
       .section { padding: 5.5rem 0; }
 
       .section-header {
@@ -756,7 +830,7 @@
       footer a { color: #f4d9a2; }
 
       @media (max-width: 900px) {
-        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .contact-grid {
+        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .contact-grid, .home-grid {
           grid-template-columns: 1fr;
         }
         .hero { padding-top: 3rem; }
@@ -863,6 +937,44 @@
           <div class="trust-item">Clear, results-focused strategy</div>
         </div>
       </div>
+
+      <section class="section home-showcase" aria-labelledby="homeowner-market-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">The audience you can reach</span>
+            <h2 id="homeowner-market-title">Put your brand in the places homeowners already live, plan, and spend.</h2>
+            <p class="lead">
+              Showcase your business where high-value homeowners and families make decisions: at home, in their communities, and through trusted local recommendations. You get consistent monthly visibility designed to build familiarity before the buying moment.
+            </p>
+          </div>
+
+          <div class="home-grid">
+            <article class="home-card">
+              <img class="home-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85" alt="Modern home exterior representing high-value homeowner communities" width="1600" height="1067" loading="lazy" decoding="async" />
+              <div class="home-caption">
+                <strong>High-value neighborhoods</strong>
+                <span>Build familiarity with the homeowners most likely to invest.</span>
+              </div>
+            </article>
+
+            <article class="home-card">
+              <img class="home-image" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Bright home interior representing homeowner lifestyle" width="1000" height="667" loading="lazy" decoding="async" />
+              <div class="home-caption">
+                <strong>Real lifestyle moments</strong>
+                <span>Connect your offer to the needs people are already solving.</span>
+              </div>
+            </article>
+
+            <article class="home-card">
+              <img class="home-image" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=85" alt="Welcoming house exterior representing local communities" width="1000" height="667" loading="lazy" decoding="async" />
+              <div class="home-caption">
+                <strong>Community trust</strong>
+                <span>Turn local presence into more calls, conversations, and customers.</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
       <section id="about" class="section reveal">
         <div class="container">

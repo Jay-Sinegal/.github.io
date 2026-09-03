@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # Change to your build directory (e.g., './dist', './out', or './_site')
+          path: './docs'
 
   deploy:
     environment:
