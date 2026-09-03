@@ -255,73 +255,13 @@
       line-height: 1.6;
     }
 
-    /* ── Credentials & Recognition ── */
+    /* Credentials */
     .credentials { background: var(--bg-soft); }
     .credentials-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
-    }
-    .credential-card {
-      min-height: 185px;
-      padding: 1.5rem;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent);
-      border-radius: var(--radius);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .credential-number {
-      font-family: system-ui, sans-serif;
-      color: var(--accent);
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-    .credential-card h3 {
-      font-size: 1.15rem;
-      line-height: 1.25;
-      margin: 1.5rem 0 0.35rem;
-    }
-    .credential-card p {
-      color: var(--text-muted);
-      font-family: system-ui, sans-serif;
-      font-size: 0.86rem;
-      line-height: 1.55;
-    }
-    .recognition-feature {
-      display: grid;
-      grid-template-columns: minmax(220px, 0.85fr) minmax(280px, 1.15fr);
-      gap: 2.5rem;
-      align-items: center;
-      margin-top: 2.5rem;
-      padding: 2rem;
-      background: var(--graphite);
-      color: var(--bg);
-      border-radius: var(--radius);
-    }
-    .recognition-feature img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border: 1px solid var(--silver);
-      border-radius: var(--radius);
-    }
-    .recognition-feature .section-label { color: var(--accent-light); }
-    .recognition-feature h3 {
-      font-size: clamp(1.55rem, 3.5vw, 2.25rem);
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-    .recognition-feature p:last-child {
-      color: var(--silver);
-      font-family: system-ui, sans-serif;
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
+    
 
     /* ── Testimonial ── */
     .testimonial {
@@ -476,7 +416,6 @@
       <p>
         <strong>Reaching high-value homeowners and families nationwide, every month.</strong>
         &nbsp;·&nbsp; 1,000+ Markets Nationwide
-        &nbsp;·&nbsp; M.S. Entertainment Business (2027) &amp; B.S. Music Business
       </p>
     </div>
   </div>
@@ -542,7 +481,7 @@
       <div class="services-grid">
 
         <div class="service-card">
-          <div class="service-icon">⭐</div>
+          <div class="service-icon"></div>
           <h3>Brand Strategy &amp; Positioning</h3>
           <p>
             You get a clear, honest roadmap for who your brand is and why customers
@@ -552,7 +491,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-icon">✅</div>
+          <div class="service-icon"></div>
           <h3>Community &amp; Market Visibility Campaigns</h3>
           <p>
             You get your business placed directly in front of high-value homeowners
@@ -563,7 +502,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-icon">💬</div>
+          <div class="service-icon"></div>
           <h3>Growth &amp; Revenue Strategy</h3>
           <p>
             You get a hands-on plan for turning visibility into actual sales — the
@@ -581,31 +520,6 @@
 
 
   <!-- CREDENTIALS & RECOGNITION -->
-  <section class="credentials" id="credentials">
-    <div class="container">
-      <p class="section-label">Credentials · Recognition · Results</p>
-      <h2 class="section-title">Strategy backed by education, experience, and community trust.</h2>
-      <p class="section-intro">
-        I combine formal entertainment-business education with hands-on brand development,
-        media experience, and community leadership.
-      </p>
-
-      <div class="credentials-grid">
-        <article class="credential-card">
-          <span class="credential-number">01 · Education</span>
-          <div>
-            <h3>M.S. Entertainment Business</h3>
-            <p>Full Sail University · Expected 2027</p>
-          </div>
-        </article>
-
-        <article class="credential-card">
-          <span class="credential-number">02 · Education</span>
-          <div>
-            <h3>B.S. Music Business</h3>
-            <p>Full Sail University</p>
-          </div>
-        </article>
 
         <article class="credential-card">
           <span class="credential-number">03 · Recognition</span>
@@ -641,7 +555,7 @@
       </div>
 
       <article class="recognition-feature">
-        <img src="assets/louisiana-storyteller.jpg" alt="Louisiana Storyteller recognition seal" loading="lazy" />
+        <img src="assets/louisiana-storyteller.jpg"loading="lazy" />
         <div>
           <p class="section-label">Featured Recognition</p>
           <h3>Louisiana stories deserve strategy with substance.</h3>
@@ -674,7 +588,7 @@
           <cite>— BVM Advertiser</cite>
         </div>
         <img class="testimonial-image" src="assets/client-testimonial.jpg"
-             alt="Five-star testimonial from a Best Version Media advertiser" loading="lazy" />
+             loading="lazy" />
       </div>
     </div>
   </section>
