@@ -255,6 +255,74 @@
       line-height: 1.6;
     }
 
+    /* ── Credentials & Recognition ── */
+    .credentials { background: var(--bg-soft); }
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .credential-card {
+      min-height: 185px;
+      padding: 1.5rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .credential-number {
+      font-family: system-ui, sans-serif;
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .credential-card h3 {
+      font-size: 1.15rem;
+      line-height: 1.25;
+      margin: 1.5rem 0 0.35rem;
+    }
+    .credential-card p {
+      color: var(--text-muted);
+      font-family: system-ui, sans-serif;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+    .recognition-feature {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.85fr) minmax(280px, 1.15fr);
+      gap: 2.5rem;
+      align-items: center;
+      margin-top: 2.5rem;
+      padding: 2rem;
+      background: var(--graphite);
+      color: var(--bg);
+      border-radius: var(--radius);
+    }
+    .recognition-feature img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border: 1px solid var(--silver);
+      border-radius: var(--radius);
+    }
+    .recognition-feature .section-label { color: var(--accent-light); }
+    .recognition-feature h3 {
+      font-size: clamp(1.55rem, 3.5vw, 2.25rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .recognition-feature p:last-child {
+      color: var(--silver);
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
     /* ── Testimonial ── */
     .testimonial {
       background: linear-gradient(135deg, #1A1A1C 0%, var(--graphite) 72%, #343126 100%);
@@ -277,6 +345,24 @@
       font-size: 0.9rem;
       font-style: normal;
       opacity: 0.85;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 1fr) minmax(240px, 0.75fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .testimonial blockquote,
+    .testimonial cite { text-align: left; margin-left: 0; }
+    .testimonial-stars {
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      margin-bottom: 1rem;
+    }
+    .testimonial-image {
+      width: 100%;
+      border: 1px solid var(--silver);
+      border-radius: var(--radius);
     }
 
     /* ── CTA ── */
@@ -334,6 +420,8 @@
       .about-photo { aspect-ratio: 3/2; }
       .btn-outline { margin-left: 0; }
       .nav-links { gap: 1rem; }
+      .recognition-feature,
+      .testimonial-grid { grid-template-columns: 1fr; }
     }
 
     /* ── Reduced motion ── */
@@ -352,6 +440,7 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#credentials">Credentials</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -491,15 +580,102 @@
   <hr class="section-rule" />
 
 
+  <!-- CREDENTIALS & RECOGNITION -->
+  <section class="credentials" id="credentials">
+    <div class="container">
+      <p class="section-label">Credentials · Recognition · Results</p>
+      <h2 class="section-title">Strategy backed by education, experience, and community trust.</h2>
+      <p class="section-intro">
+        I combine formal entertainment-business education with hands-on brand development,
+        media experience, and community leadership.
+      </p>
+
+      <div class="credentials-grid">
+        <article class="credential-card">
+          <span class="credential-number">01 · Education</span>
+          <div>
+            <h3>M.S. Entertainment Business</h3>
+            <p>Full Sail University · Expected 2027</p>
+          </div>
+        </article>
+
+        <article class="credential-card">
+          <span class="credential-number">02 · Education</span>
+          <div>
+            <h3>B.S. Music Business</h3>
+            <p>Full Sail University</p>
+          </div>
+        </article>
+
+        <article class="credential-card">
+          <span class="credential-number">03 · Recognition</span>
+          <div>
+            <h3>Louisiana Storyteller</h3>
+            <p>Recognized for helping tell the stories of Louisiana people, businesses, and communities.</p>
+          </div>
+        </article>
+
+        <article class="credential-card">
+          <span class="credential-number">04 · Media</span>
+          <div>
+            <h3>Best Version Media Publisher</h3>
+            <p>Connecting local experts and brands with homeowners and families.</p>
+          </div>
+        </article>
+
+        <article class="credential-card">
+          <span class="credential-number">05 · Industry</span>
+          <div>
+            <h3>Entertainment-Business Development</h3>
+            <p>Brand, content, operations, and artist-development experience.</p>
+          </div>
+        </article>
+
+        <article class="credential-card">
+          <span class="credential-number">06 · Leadership</span>
+          <div>
+            <h3>Coach of the Year</h3>
+            <p>Recognized for youth leadership, development, and community impact.</p>
+          </div>
+        </article>
+      </div>
+
+      <article class="recognition-feature">
+        <img src="assets/louisiana-storyteller.jpg" alt="Louisiana Storyteller recognition seal" loading="lazy" />
+        <div>
+          <p class="section-label">Featured Recognition</p>
+          <h3>Louisiana stories deserve strategy with substance.</h3>
+          <p>
+            My work goes beyond promotion. I identify the value inside a business,
+            shape it into a clear story, and place that story in front of the people
+            it was built to serve.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="section-rule" />
+
+
   <!-- TESTIMONIAL -->
   <section class="testimonial">
     <div class="container">
-      <blockquote>
-        "YOUR CLIENT'S WORDS GO HERE — a real quote from someone
-        whose business grew because of your work. The more specific
-        and genuine, the more powerful it is."
-      </blockquote>
-      <cite>— CLIENT NAME, Client Description or Location</cite>
+      <div class="testimonial-grid">
+        <div>
+          <p class="section-label">Client Perspective</p>
+          <div class="testimonial-stars" aria-label="Five-star testimonial">★★★★★</div>
+          <blockquote>
+            “Best Version Media has been amazing to work with! They created a beautiful,
+            professional magazine ad that truly represents our business. Their team is
+            creative, responsive, and committed to helping local businesses grow.
+            Highly recommended!”
+          </blockquote>
+          <cite>— BVM Advertiser</cite>
+        </div>
+        <img class="testimonial-image" src="assets/client-testimonial.jpg"
+             alt="Five-star testimonial from a Best Version Media advertiser" loading="lazy" />
+      </div>
     </div>
   </section>
 
@@ -514,7 +690,7 @@
       </p>
       <div class="cta-buttons">
         <a href="#contact" class="btn">Book Your Free Consultation</a>
-        <a href="tel:+10000000000" class="btn btn-outline">Call Now</a>
+        <a href="tel:+13375238767" class="btn btn-outline">Call Now</a>
       </div>
     </div>
   </section>
@@ -536,13 +712,13 @@
         <div class="contact-item">
           <div class="label">Phone</div>
           <div class="value">
-            <a href="tel:+10000000000">(337)523-8767</a>
+            <a href="tel:+13375238767">(337) 523-8767</a>
           </div>
         </div>
         <div class="contact-item">
           <div class="label">Email</div>
           <div class="value">
-            <a href="mailto:you@youremail.com">Jaylensinegal@yahoo.com</a>
+            <a href="mailto:Jaylensinegal@yahoo.com">Jaylensinegal@yahoo.com</a>
           </div>
         </div>
         <div class="contact-item">
@@ -564,7 +740,7 @@
       <p>
         &copy; 2026 <strong>Jaylen Sinegal</strong>
         &nbsp;·&nbsp; Lafayette, LA
-        &nbsp;·&nbsp; <a href="mailto:you@youremail.com">jjsinegal@alumni.fullsail.edu</a>
+        &nbsp;·&nbsp; <a href="mailto:jjsinegal@alumni.fullsail.edu">jjsinegal@alumni.fullsail.edu</a>
       </p>
       <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;">
         Built with purpose at the
