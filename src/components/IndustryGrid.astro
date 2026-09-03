@@ -1,0 +1,63 @@
+---
+const industries = [
+  {
+    title: "Home Service Pros",
+    description: "Reach high-value homeowners looking for reliable contractors, remodelers, and specialists.",
+    icon: "🏠",
+    class: "md:col-span-2 md:row-span-1",
+  },
+  {
+    title: "Healthcare & Wellness",
+    description: "Build local trust for clinics, private practices, and wellness brands.",
+    icon: "🩺",
+    class: "md:col-span-1 md:row-span-1",
+  },
+  {
+    title: "Retail & Jewelers",
+    description: "Highlight premium products and drive foot traffic to your physical store.",
+    icon: "💎",
+    class: "md:col-span-1 md:row-span-1",
+  },
+  {
+    title: "Schools & Community",
+    description: "Connect educational programs and sponsorships directly with local families.",
+    icon: "🎓",
+    class: "md:col-span-2 md:row-span-1",
+  },
+  {
+    title: "Hospitality & Dealerships",
+    description: "Stand out in competitive markets with memorable, high-converting branding.",
+    ,
+    class: "md:col-span-3 md:row-span-1",
+  },
+];
+---
+
+<section class="py-16 px-4 max-w-6xl mx-auto">
+  <div class="text-center mb-12">
+    <p class="text-xs uppercase tracking-widest text-[#B58D50] font-semibold mb-2">Tailored Reach</p>
+    <h2 class="text-3xl md:text-4xl font-serif text-white font-bold">Industries We Scale</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {industries.map((item) => (
+      <div 
+        class={`group relative overflow-hidden rounded-2xl bg-[#1D1D1F] border border-white/10 p-6 transition-all duration-300 hover:border-[#B58D50]/50 hover:shadow-lg hover:shadow-[#B58D50]/10 ${item.class}`}
+      >
+        <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-[#B58D50]/10 rounded-full blur-2xl group-hover:bg-[#B58D50]/20 transition-all duration-500"></div>
+
+        <div class="relative z-10 flex flex-col justify-between h-full">
+          <div class="text-3xl mb-4">{item.icon}</div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-[#B58D50] transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
