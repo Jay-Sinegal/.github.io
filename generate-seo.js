@@ -42,7 +42,7 @@ const pages = [];
 pages.push(
   makePage({
     title:
-      "Branding, SEO & Marketing Visibility | Jaylen Sinegal",
+      "Branding, SEO & Marketing Visibility |",
     description:
       "Helping experts and businesses get seen, trusted, and remembered through branding, SEO, print, digital visibility, sponsorships, and community marketing.",
     url: "/"
