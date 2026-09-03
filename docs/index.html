@@ -352,6 +352,91 @@
         font-weight: 700;
       }
 
+      .offer-section {
+        background: var(--charcoal);
+        color: #f7f0e7;
+      }
+
+      .offer-section .lead {
+        color: rgba(247, 240, 231, 0.72);
+      }
+
+      .offer-section .kicker {
+        color: var(--gold);
+      }
+
+      .offer-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 1.5rem;
+        align-items: stretch;
+      }
+
+      .offer-card {
+        padding: 1.6rem;
+        border: 1px solid rgba(215, 181, 122, 0.22);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .offer-card h3 {
+        font-size: 1.55rem;
+      }
+
+      .offer-list {
+        display: grid;
+        gap: 0.75rem;
+        margin: 1.25rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .offer-list li {
+        display: flex;
+        gap: 0.65rem;
+        align-items: flex-start;
+        color: rgba(247, 240, 231, 0.78);
+      }
+
+      .offer-list li::before {
+        content: "✓";
+        color: var(--gold);
+        font-weight: 800;
+      }
+
+      .price-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(145deg, rgba(215, 181, 122, 0.2), rgba(255,255,255,0.05));
+      }
+
+      .price-label {
+        color: #e8c989;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .price {
+        margin-top: 0.4rem;
+        font: 600 clamp(2.7rem, 6vw, 4.8rem)/1 var(--font-display);
+        letter-spacing: -0.07em;
+      }
+
+      .price span {
+        font: 500 1rem var(--font-body);
+        letter-spacing: 0;
+        color: rgba(247, 240, 231, 0.7);
+      }
+
+      .price-note {
+        margin-top: 0.8rem;
+        color: rgba(247, 240, 231, 0.72);
+        font-size: 0.9rem;
+      }
+
       .audience-section {
         background: linear-gradient(135deg, #f1e4d2 0%, #f8f4ee 58%, #e8d8c2 100%);
       }
@@ -868,7 +953,7 @@
       footer a { color: #f4d9a2; }
 
       @media (max-width: 900px) {
-        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .contact-grid, .home-grid, .audience-grid {
+        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .contact-grid, .home-grid, .audience-grid, .offer-grid {
           grid-template-columns: 1fr;
         }
         .hero { padding-top: 3rem; }
@@ -977,6 +1062,37 @@
           <div class="trust-item">Clear, results-focused strategy</div>
         </div>
       </div>
+
+      <section class="section offer-section" aria-labelledby="offer-title">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">What your business gets</span>
+            <h2 id="offer-title">More visibility. More trust. More opportunity.</h2>
+            <p class="lead">
+              Your growth plan connects brand materials, Google visibility, community relationships, and consistent monthly exposure to the high-value homeowners and families your business wants to reach.
+            </p>
+          </div>
+
+          <div class="offer-grid">
+            <div class="offer-card">
+              <h3>A practical growth partnership</h3>
+              <ul class="offer-list">
+                <li><span><strong>More visibility:</strong> Get your brand in front of relevant homeowners, families, and community audiences each month.</span></li>
+                <li><span><strong>More trust:</strong> Present a clearer message through professional brand materials, content, and community presence.</span></li>
+                <li><span><strong>More opportunity:</strong> Build a path from attention to calls, inquiries, appointments, and new customer conversations.</span></li>
+                <li><span><strong>Clear deliverables:</strong> Receive an agreed campaign scope, channels, timing, and follow-up expectations before work begins.</span></li>
+              </ul>
+            </div>
+
+            <div class="offer-card price-card">
+              <span class="price-label">Starting investment</span>
+              <div class="price">$90<span>/month</span></div>
+              <p class="price-note">$90/month is the lowest starting offer. Final pricing depends on your market, audience, channels, creative needs, and campaign scope.</p>
+              <a class="button button-primary" href="#contact" style="margin-top: 1.4rem;">Get my growth plan</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="section home-showcase" aria-labelledby="homeowner-market-title">
         <div class="container">
