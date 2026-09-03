@@ -270,6 +270,7 @@
         padding: 0.7rem;
         border-radius: 12px;
         background: rgba(255,255,255,0.95);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
       }
 
       .mini-panel {
@@ -405,6 +406,13 @@
         height: 100%;
         min-height: 520px;
         object-fit: cover;
+        filter: saturate(0.9) contrast(1.05);
+        transition: transform 0.7s ease, filter 0.7s ease;
+      }
+
+      .portrait:hover .portrait-image {
+        transform: scale(1.04);
+        filter: saturate(1.08) contrast(1.05);
       }
 
       .about-copy {
@@ -451,6 +459,17 @@
       .card p {
         margin-top: 0.8rem;
         color: var(--muted);
+      }
+
+      .card ul {
+        margin: 1rem 0 0;
+        padding-left: 1.1rem;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .card li::marker {
+        color: var(--gold-strong);
       }
 
       .process {
@@ -773,10 +792,9 @@
         <div class="container hero-grid">
           <div>
             <span class="eyebrow">Serving communities nationwide</span>
-            <h1>Turn attention into action.</h1>
+            <h1>Get found, trusted, and chosen by more customers.</h1>
             <p class="hero-copy">
-              I help experts, brands, and local businesses get seen, trusted, and remembered by the people who matter most.
-              Through strategy, storytelling, SEO, and community-driven marketing, I build visibility that actually converts.
+              Brand strategy, SEO, and community marketing for experts, brands, and local businesses ready to grow their visibility and revenue.
             </p>
 
             <div class="hero-actions">
@@ -869,7 +887,7 @@
             <span class="kicker">What I offer</span>
             <h2>Marketing that feels premium and performs.</h2>
             <p class="lead">
-              Every engagement is designed to solve a real problem: weak positioning, poor visibility, and marketing that doesn’t convert.
+              You get a clearer message, stronger visibility, and a practical path from first impression to qualified inquiry.
             </p>
           </div>
 
@@ -878,9 +896,9 @@
               <div class="icon" aria-hidden="true">✦</div>
               <h3>Brand Strategy & Positioning</h3>
               <p>
-                Brand strategy, messaging clarity, competitive differentiation, and market positioning designed to help businesses stand out with authority.
+                Make your value obvious, memorable, and easier for the right customer to choose.
               </p>
-              <ul style="margin: 1rem 0 0; padding-left: 1.1rem; color: var(--muted); line-height: 1.8;">
+              <ul>
                 <li>Integrated Marketing Campaigns</li>
                 <li>Content Strategy & Creative Direction</li>
                 <li>Market Research & Consumer Insights</li>
@@ -891,9 +909,9 @@
               <div class="icon" aria-hidden="true">◎</div>
               <h3>Community & Partnership Marketing</h3>
               <p>
-                Build visibility through sponsorships, partnerships, local engagement, and high-trust community channels that drive conversion.
+                Reach people through trusted local relationships, partnerships, and experiences that create real attention.
               </p>
-              <ul style="margin: 1rem 0 0; padding-left: 1.1rem; color: var(--muted); line-height: 1.8;">
+              <ul>
                 <li>Sponsorship Development & Sales</li>
                 <li>Event Concept & Coordination</li>
                 <li>Business Development</li>
@@ -904,9 +922,9 @@
               <div class="icon" aria-hidden="true">↗</div>
               <h3>Digital Growth & Optimization</h3>
               <p>
-                Crush friction in the funnel with digital strategy, SEO, CRM optimization, and performance-focused frameworks that turn attention into action.
+                Turn online interest into organized follow-up, measurable activity, and more opportunities to close business.
               </p>
-              <ul style="margin: 1rem 0 0; padding-left: 1.1rem; color: var(--muted); line-height: 1.8;">
+              <ul>
                 <li>Digital & Social Media Marketing</li>
                 <li>SEO / CRM Optimization</li>
                 <li>CRM Platforms • SEO Tools • Social Media Management Platforms</li>
