@@ -1,0 +1,17 @@
+track("page_view");
+
+track("industry_view", {
+  industry: "hvac"
+});
+
+track("location_view", {
+  location: "broussard"
+});
+
+track("cta_click", {
+  cta: "get_your_business_seen"
+});
+
+track("quote_request", {
+  service: "business-cards"
+});
