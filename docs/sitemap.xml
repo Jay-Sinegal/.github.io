@@ -23,4 +23,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url><loc>https://jaylensinegal.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
