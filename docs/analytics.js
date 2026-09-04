@@ -35,10 +35,5 @@
     else if (link.hostname && link.hostname !== window.location.hostname) send("outbound_click", parameters);
   });
 
-  var form = document.querySelector("[data-lead-form]");
-  if (form) {
-    form.addEventListener("submit", function () {
-      send("generate_lead", { form_name: "consultation_form", page_type: pageType });
-    });
-  }
+  window.trackSiteEvent = send;
 })();
