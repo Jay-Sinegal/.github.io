@@ -6,6 +6,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://jaylensinegal.com/blog/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jaylensinegal.com/blog/should-families-brand-kids-early.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jaylensinegal.com/faq.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
