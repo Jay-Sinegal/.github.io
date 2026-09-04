@@ -28,6 +28,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Validate SEO metadata and structured data
+        run: python3 scripts/validate_seo.py
+
       # If you have a build step (e.g., npm run build, hugo, etc.), add it here:
       # - name: Install dependencies & Build
       #   run: |
