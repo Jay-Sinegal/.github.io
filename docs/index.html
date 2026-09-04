@@ -938,16 +938,24 @@
 
       .contact-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1rem;
+        align-content: start;
+      }
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+        gap: 1.5rem;
+        align-items: start;
         margin-top: 2rem;
       }
 
       .lead-form {
         display: grid;
         gap: 1rem;
-        max-width: 760px;
-        margin-top: 2rem;
+        max-width: none;
+        margin-top: 0;
         padding: 1.5rem;
         background: rgba(255, 255, 255, 0.72);
         border: 1px solid var(--line);
@@ -1082,7 +1090,7 @@
       footer a { color: #f4d9a2; }
 
       @media (max-width: 900px) {
-        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .contact-grid, .home-grid, .audience-grid, .offer-grid, .meeting-options {
+        .hero-grid, .about-grid, .testimonial-wrap, .service-grid, .steps, .home-grid, .audience-grid, .offer-grid, .meeting-options, .contact-layout {
           grid-template-columns: 1fr;
         }
         .hero { padding-top: 3rem; }
@@ -1101,6 +1109,7 @@
         .button { width: 100%; }
         .hero-actions, .cta-actions { flex-direction: column; }
         .form-grid { grid-template-columns: 1fr; }
+        .contact-grid { grid-template-columns: 1fr; }
         .promo-inner { align-items: flex-start; flex-direction: column; }
       }
 
@@ -1122,7 +1131,6 @@
           <a href="#about">About</a>
           <a href="#audiences">Who we support</a>
           <a href="#services">Services</a>
-          <a href="#insights">Insights</a>
           <a href="#process">Process</a>
           <a href="faq.html">FAQ</a>
           <a href="/blog/">Jay's Blog</a>
@@ -1343,23 +1351,6 @@
         </div>
       </section>
 
-      <section id="insights" class="section audience-section" aria-labelledby="insights-title">
-        <div class="container">
-          <div class="section-header">
-            <span class="kicker">Strategy &amp; insights</span>
-            <h2 id="insights-title">Brand, business, marketing, and entertainment thinking rooted in Louisiana.</h2>
-            <p class="lead">From Lafayette and Acadiana to communities across South Louisiana, the work connects clear strategy with the relationships, culture, and market realities that shape sustainable growth.</p>
-          </div>
-          <div class="audience-grid">
-            <article class="audience-card"><h3>Brand &amp; Marketing</h3><p>Positioning, community marketing, personal branding, and reaching families and homeowners with relevance.</p></article>
-            <article class="audience-card"><h3>Business &amp; Entrepreneurship</h3><p>Business models, partnerships, development, and the decisions that turn an idea into an operating business.</p></article>
-            <article class="audience-card"><h3>Entertainment &amp; Sports Business</h3><p>Artist and athlete branding, events, licensing, audience development, and the business behind culture.</p></article>
-            <article class="audience-card"><h3>Louisiana Business &amp; Community</h3><p>Growth and community strategy across Lafayette, Acadiana, Broussard, Youngsville, Abbeville, New Iberia, and surrounding markets.</p></article>
-          </div>
-          <a class="button button-primary" href="/blog/" style="margin-top: 1.5rem;">Explore Jay's insights</a>
-        </div>
-      </section>
-
       <section id="services" class="section reveal">
         <div class="container">
           <div class="section-header">
@@ -1498,6 +1489,7 @@
             <h2>Let’s make your next move count.</h2>
           </div>
 
+          <div class="contact-layout">
           <form class="lead-form" action="https://formspree.io/f/xeaqkdgv" method="POST" accept-charset="UTF-8" data-lead-form>
             <div class="form-honeypot" aria-hidden="true">
               <label for="company-website">Leave this field empty</label>
@@ -1584,6 +1576,7 @@
               <div class="contact-value">Mon–Sun • 6:00am–7:00pm</div>
             </div>
           </div>
+          </div>
 
           <h3 class="meeting-heading">Choose how we meet</h3>
           <p class="lead">Book a time that fits your schedule, or submit the form and I’ll follow up personally.</p>
@@ -1615,7 +1608,7 @@
       <div class="container footer-inner">
         <div>© <span id="year">2026</span> Jaylen Sinegal</div>
         <div>
-          <a href="/blog/">Brand, business, marketing &amp; entertainment insights</a> · <a href="/privacy.html">Privacy</a>
+          <a href="/blog/">Jay's Blog</a> · <a href="/privacy.html">Privacy</a>
         </div>
       </div>
     </footer>

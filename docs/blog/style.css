@@ -1,5 +1,5 @@
 /* ==========================================================
-   JAYLEN SINEGAL â€” BLOG
+   JAYLEN SINEGAL — BLOG
    One clean stylesheet for the blog index and article pages.
    Brand: premium, strategic, cultural, direct.
    ========================================================== */
@@ -271,12 +271,16 @@ img {
 }
 
 .post-card {
-  padding: 2rem 0;
-  border-top: 1px solid var(--line);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 253, 249, 0.78);
 }
 
-.post-card:first-child {
-  border-top: 0;
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .topic-directory {
@@ -394,8 +398,8 @@ img {
 .post-copy h2,
 .post-card h2 {
   margin-bottom: 1.2rem;
-  font-size: clamp(2.6rem, 5vw, 5rem);
-  line-height: 0.98;
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
+  line-height: 1.05;
 }
 
 .post-copy h2 a,
@@ -508,7 +512,7 @@ blockquote.pull {
 }
 
 blockquote.pull::before {
-  content: "â€œ";
+  content: "“";
   position: absolute;
   top: -0.5rem;
   left: 1rem;
@@ -652,6 +656,10 @@ blockquote.pull::before {
 /* Responsive */
 
 @media (max-width: 920px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
   .featured-post {
     grid-template-columns: 1fr;
   }
