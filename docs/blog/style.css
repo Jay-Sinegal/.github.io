@@ -279,8 +279,10 @@ img {
 
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
+  max-width: 900px;
+  margin-inline: auto;
 }
 
 .topic-directory {
@@ -398,7 +400,7 @@ img {
 .post-copy h2,
 .post-card h2 {
   margin-bottom: 1.2rem;
-  font-size: clamp(1.8rem, 3vw, 2.75rem);
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
   line-height: 1.05;
 }
 
