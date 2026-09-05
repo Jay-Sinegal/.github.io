@@ -6,20 +6,20 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; form-action https://formspree.io; upgrade-insecure-requests" />
     <meta name="google-site-verification" content="JRzFEizwLuVe1Atk-OXR0UxbEk-o51NkSbR76DCtBFI" />
-    <meta name="description" content="Jaylen Sinegal is a Louisiana brand and business strategist helping organizations grow through positioning, marketing strategy, community partnerships, and business development." />
+    <meta name="description" content="Jaylen Sinegal is a Louisiana brand strategist and independent contractor with Best Version Media, serving Neighbors of Broussard advertisers." />
     <meta name="keywords" content="Jaylen Sinegal, brand strategy, business strategy, marketing strategy, business development, community marketing, entrepreneurship, entertainment business, Louisiana" />
     <meta name="theme-color" content="#1a1715" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Jaylen Sinegal | Brand &amp; Business Strategist in Louisiana" />
-    <meta property="og:description" content="Brand strategy, business development, marketing strategy, and community growth for organizations in Lafayette, Acadiana, South Louisiana, and beyond." />
+    <meta property="og:description" content="Jaylen Sinegal is a Louisiana brand strategist and independent contractor with Best Version Media, serving Neighbors of Broussard advertisers." />
     <meta property="og:url" content="https://jaylensinegal.com/" />
     <meta property="og:image" content="https://jaylensinegal.com/louisiana-storyteller.jpg" />
     <meta property="og:image:alt" content="Jaylen Sinegal, brand and business strategist in Louisiana" />
     <meta property="og:site_name" content="Jaylen Sinegal" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Jaylen Sinegal | Brand &amp; Business Strategist in Louisiana" />
-    <meta name="twitter:description" content="Brand strategy, business development, marketing strategy, and community growth for organizations in Louisiana and beyond." />
+    <meta name="twitter:description" content="Jaylen Sinegal is a Louisiana brand strategist and independent contractor with Best Version Media, serving Neighbors of Broussard advertisers." />
     <meta name="twitter:image" content="https://jaylensinegal.com/louisiana-storyteller.jpg" />
     <meta name="twitter:image:alt" content="Jaylen Sinegal, brand and business strategist in Louisiana" />
     <link rel="canonical" href="https://jaylensinegal.com/" />
@@ -42,7 +42,13 @@
         "@id": "https://jaylensinegal.com/#person",
         "name": "Jaylen Sinegal",
         "jobTitle": "Brand & Business Strategist",
-        "description": "Helping experts and businesses build memorable brands, clarify their positioning, and earn customer trust.",
+        "description": "Jaylen Sinegal is a Louisiana brand strategist and independent contractor with Best Version Media, serving Neighbors of Broussard advertisers.",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Best Version Media",
+          "url": "https://www.bestversionmedia.com/",
+          "description": "Jaylen Sinegal works with Best Version Media as an independent contractor."
+        },
         "url": "https://jaylensinegal.com/",
         "homeLocation": { "@type": "Place", "name": "Lafayette, Louisiana" },
         "areaServed": ["Lafayette", "Acadiana", "South Louisiana", "Louisiana", "United States"],
@@ -342,6 +348,50 @@
         letter-spacing: 0.11em;
         text-transform: uppercase;
       }
+
+      .publication-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 250px;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(215, 181, 122, 0.3);
+        border-radius: 18px;
+        background: #fff;
+        color: #1f2c43;
+      }
+
+      .publication-card img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .publication-card-copy {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 1.25rem;
+        background: #fff;
+        overflow-wrap: anywhere;
+      }
+
+      .publication-card-copy .publication-name {
+        margin: 0 0 1.15rem;
+        font: 800 clamp(1.2rem, 3vw, 1.75rem)/1 var(--font-body);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .publication-card-copy strong,
+      .publication-card-copy span,
+      .publication-card-copy a {
+        display: block;
+        color: #1f2c43;
+      }
+
+      .publication-card-copy strong { font-size: 1.2rem; }
+      .publication-card-copy span { margin: 0.15rem 0 0.7rem; font-weight: 700; }
+      .publication-card-copy a { font-size: 0.82rem; font-weight: 700; }
 
       .mini-panel {
         padding: 1rem;
@@ -1169,6 +1219,8 @@
         html { scroll-behavior: auto; }
         .button { transition: none; }
       }
+      footer a { overflow-wrap: anywhere; }
+      .footer-inner > div { min-width: 0; }
     </style>
   </head>
   <body>
@@ -1229,11 +1281,16 @@
           </div>
 
           <aside class="hero-card" aria-label="Highlights">
-            <div class="publication-identity">
-              <img class="partner-logo" src="IMG_2410.jpeg" alt="Best Version Media" width="591" height="213" loading="eager" />
-              <span>Neighbors of Broussard</span>
-              <strong>Jaylen Sinegal</strong>
-              <span>Local advertising contact</span>
+            <div class="publication-card" aria-label="Neighbors of Broussard contact card">
+              <img src="images/neighbors-of-broussard-card.jpeg" alt="Powered by Best Version Media brand background" width="300" height="169" loading="eager" />
+              <div class="publication-card-copy">
+                <div class="publication-name">Neighbors of Broussard</div>
+                <strong>Jaylen Sinegal</strong>
+                <span>Local advertising contact</span>
+                <a href="https://www.bestversionmedia.com/" target="_blank" rel="noopener">Best Version Media — official website</a>
+                <a href="tel:+13375238767">(337) 523-8767</a>
+                <a href="mailto:jsinegal@bestversionmedia.com">jsinegal@bestversionmedia.com</a>
+              </div>
             </div>
             <p class="affiliation-note">Jaylen Sinegal is an independent contractor with Best Version Media. JaylenSinegal.com is independently owned and operated; Best Version Media does not own, operate, sponsor, or endorse this website.</p>
             <div class="mini-panel">
@@ -1406,7 +1463,10 @@
               <p>My work sits at the intersection of culture, media, entertainment, sports, and business. I help clients turn big ideas into brands people remember and trust.</p>
               <p>From local businesses to expert-led professionals, I focus on clarity, visibility, and momentum. The goal is simple: make the right people notice you, understand your value, and take action.</p>
               <p>Through a multi-market strategy spanning over 1,000 communities, I connect brands with the homeowners, families, and decision-makers most likely to engage and buy.</p>
-              <p><a class="btn btn-secondary" href="/blog/who-is-jaylen-sinegal-part-1.html">Read My Story</a></p>
+              <h3>My connection to Best Version Media</h3>
+              <p>I work with Best Version Media as an independent contractor and serve as a local advertising contact for Neighbors of Broussard. Through this relationship, I help local businesses explore print and digital advertising opportunities.</p>
+              <p><a href="https://www.bestversionmedia.com/" target="_blank" rel="noopener">Explore Best Version Media’s advertising services</a> or <a href="mailto:jsinegal@bestversionmedia.com">contact me at my Best Version Media email</a>.</p>
+              <p><a class="button button-secondary" href="/blog/who-is-jaylen-sinegal-part-1.html">Read My Story</a></p>
             </div>
           </div>
         </div>
@@ -1551,7 +1611,7 @@
           </div>
 
           <div class="contact-layout">
-          <form class="lead-form" action="https://formspree.io/f/xeaqkdgv" method="POST" accept-charset="UTF-8" data-lead-form>
+          <form id="consultation-form" class="lead-form" action="https://formspree.io/f/xeaqkdgv" method="POST" accept-charset="UTF-8" data-lead-form>
             <div class="form-honeypot" aria-hidden="true">
               <label for="company-website">Leave this field empty</label>
               <input id="company-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
@@ -1641,25 +1701,25 @@
           </div>
 
           <h3 class="meeting-heading">Choose how we meet</h3>
-          <p class="lead">Book a time that fits your schedule, or submit the form and I’ll follow up personally.</p>
+          <p class="lead">Tell me your preferred meeting format in the form above, and I’ll follow up to arrange a time.</p>
 
           <div class="meeting-options" aria-label="Meeting booking options">
             <article class="meeting-card">
               <h3>In-person meeting</h3>
               <p>Broussard, Lafayette, Abbeville, New Iberia, and surrounding areas.</p>
-              <a class="button button-secondary" href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" rel="noopener">See availability</a>
+              <a class="button button-secondary" href="#consultation-form">Request an in-person meeting</a>
             </article>
 
             <article class="meeting-card">
               <h3>Virtual meeting</h3>
               <p>Meet online from anywhere in Louisiana or nationwide.</p>
-              <a class="button button-secondary" href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" rel="noopener">Book virtual time</a>
+              <a class="button button-secondary" href="#consultation-form">Request a virtual meeting</a>
             </article>
 
             <article class="meeting-card">
               <h3>Phone call</h3>
-              <p>Prefer a call? Choose a time online or call directly.</p>
-              <a class="button button-secondary" href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" rel="noopener">Book a phone call</a>
+              <p>Prefer a call? Reach me directly to discuss your goals.</p>
+              <a class="button button-secondary" href="tel:+13375238767">Call Jaylen</a>
             </article>
           </div>
         </div>
