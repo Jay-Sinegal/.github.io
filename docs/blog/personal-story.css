@@ -8,3 +8,19 @@
 .story-navigation span { color: var(--muted); }
 .personal-story .site-footer { overflow-wrap: anywhere; }
 @media (max-width: 640px) { .personal-story .site-nav { flex-wrap: wrap; overflow: visible; } .personal-story .site-header { position: static; } .personal-story .story-content { padding-inline: 1.25rem; } }
+
+/* Desktop pairs the introduction with the portrait; smaller screens stack them. */
+.personal-story .story-hero { padding: clamp(3rem, 5vw, 5rem) 1.5rem; }
+.story-hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: clamp(2rem, 5vw, 5rem); }
+.personal-story .story-hero h1 { font-size: clamp(3.5rem, 6vw, 5.8rem); line-height: 1.02; }
+.story-hero-photo { width: 100%; max-width: 420px; margin: 0; justify-self: end; }
+.story-hero-photo figcaption { color: var(--cream-deep); }
+.personal-story .story-content { padding-top: clamp(2.5rem, 5vw, 4.5rem); }
+@media (max-width: 800px) {
+  .story-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .personal-story .story-hero { padding: 2.5rem 1.25rem; }
+  .personal-story .story-hero .wrap { width: 100%; }
+  .personal-story .story-hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
+  .story-hero-photo { justify-self: center; }
+  .personal-story .hero .meta { line-height: 1.8; margin-top: 1.5rem; }
+}
