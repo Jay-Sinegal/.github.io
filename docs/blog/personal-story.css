@@ -1,0 +1,10 @@
+/* Personal story: reuse the shared blog design and preserve full photographs. */
+.personal-story .story-content { width: min(100%, 75ch); margin-inline: auto; padding: 3rem 1.5rem 2rem; font-size: 1.125rem; overflow-wrap: anywhere; }
+.story-photo { margin: 0 auto 2.5rem; max-width: 540px; }
+.story-photo img { width: 100%; height: auto; border-radius: 18px; }
+.story-photo figcaption { margin-top: .8rem; color: var(--muted); font-size: .875rem; line-height: 1.6; font-style: italic; }
+.personal-story .hero .meta { color: var(--cream-deep); }
+.story-navigation { display: grid; gap: 1rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.story-navigation span { color: var(--muted); }
+.personal-story .site-footer { overflow-wrap: anywhere; }
+@media (max-width: 640px) { .personal-story .site-nav { flex-wrap: wrap; overflow: visible; } .personal-story .site-header { position: static; } .personal-story .story-content { padding-inline: 1.25rem; } }
